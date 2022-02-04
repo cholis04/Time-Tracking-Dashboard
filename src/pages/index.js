@@ -1,17 +1,14 @@
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import Main from '../Components/Main';
+
+import MainLayout from '../layouts/MainLayout';
 
 // markup
 const IndexPage = () => {
   return (
-    <>
-      <Helmet>
-        <title>My Title</title>
-      </Helmet>
-      <main>
-        <h1>Hello World</h1>
-      </main>
-    </>
+    <MainLayout>
+      <Main />
+    </MainLayout>
   );
 };
 
