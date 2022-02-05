@@ -20,7 +20,7 @@ export const ItemHead = styled(Item)`
 `;
 
 export const Content = styled.div`
-  padding: 1.5em;
+  padding: 1.6em;
   height: 100%;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -35,5 +35,18 @@ export const HeadContent = styled.div`
 
 export const ContentTitle = styled.h2`
   font-size: 1em;
-  font-weight: 400;
+  font-weight: 500;
+`;
+
+export const Info = styled.div`
+  margin-top: 1.4rem;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const TextInfo = styled.p`
+  margin-bottom: ${(props) => (props.heading ? '0.4rem' : '0')};
+  font-size: ${(props) => (props.heading ? '3em' : '0.8em')};
+  font-weight: ${(props) => (props.heading ? '300' : '500')};
+  color: ${(props) => (props.heading ? 'white' : 'hsl(236, 100%, 87%)')};
 `;

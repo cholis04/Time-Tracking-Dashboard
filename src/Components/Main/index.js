@@ -7,10 +7,13 @@ import {
   Content,
   ContentTitle,
   HeadContent,
+  Info,
   Item,
   ItemHead,
+  TextInfo,
 } from './styledMain';
 import Thumbnail from '../Thumbnail';
+import ButtonOptions from '../ButtonOptions';
 
 function Main() {
   const staticQueryImageJeremy = useStaticQuery(graphql`
@@ -48,18 +51,12 @@ function Main() {
         <Content>
           <HeadContent>
             <ContentTitle>Work</ContentTitle>
-            <svg width='21' height='5' xmlns='http://www.w3.org/2000/svg'>
-              <path
-                d='M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z'
-                fill='#BBC0FF'
-                fillRule='evenodd'
-              />
-            </svg>
+            <ButtonOptions />
           </HeadContent>
-          <div className='info'>
-            <p>5hrs</p>
-            <p>Previous - 7hrs</p>
-          </div>
+          <Info>
+            <TextInfo heading={true}>5hrs</TextInfo>
+            <TextInfo>Previous - 7hrs</TextInfo>
+          </Info>
         </Content>
       </Item>
       <Item backgroundColor='hsl(195, 74%, 62%)'>
@@ -67,18 +64,12 @@ function Main() {
         <Content>
           <HeadContent>
             <ContentTitle>Play</ContentTitle>
-            <svg width='21' height='5' xmlns='http://www.w3.org/2000/svg'>
-              <path
-                d='M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z'
-                fill='#BBC0FF'
-                fillRule='evenodd'
-              />
-            </svg>
+            <ButtonOptions />
           </HeadContent>
-          <div className='info'>
-            <p>1hr</p>
-            <p>Previous - 2hrs</p>
-          </div>
+          <Info>
+            <TextInfo heading={true}>1hrs</TextInfo>
+            <TextInfo>Previous - 2hrs</TextInfo>
+          </Info>
         </Content>
       </Item>
       <Item backgroundColor='hsl(348, 100%, 68%)'>
@@ -86,18 +77,12 @@ function Main() {
         <Content>
           <HeadContent>
             <ContentTitle>Study</ContentTitle>
-            <svg width='21' height='5' xmlns='http://www.w3.org/2000/svg'>
-              <path
-                d='M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z'
-                fill='#BBC0FF'
-                fillRule='evenodd'
-              />
-            </svg>
+            <ButtonOptions />
           </HeadContent>
-          <div className='info'>
-            <p>0hr</p>
-            <p>Previous - 1hrs</p>
-          </div>
+          <Info>
+            <TextInfo heading={true}>0hrs</TextInfo>
+            <TextInfo>Previous - 1hrs</TextInfo>
+          </Info>
         </Content>
       </Item>
       <Item backgroundColor='hsl(145, 58%, 55%)'>
@@ -105,18 +90,12 @@ function Main() {
         <Content>
           <HeadContent>
             <ContentTitle>Exercise</ContentTitle>
-            <svg width='21' height='5' xmlns='http://www.w3.org/2000/svg'>
-              <path
-                d='M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z'
-                fill='#BBC0FF'
-                fillRule='evenodd'
-              />
-            </svg>
+            <ButtonOptions />
           </HeadContent>
-          <div className='info'>
-            <p>1hr</p>
-            <p>Previous - 1hrs</p>
-          </div>
+          <Info>
+            <TextInfo heading={true}>1hrs</TextInfo>
+            <TextInfo>Previous - 1hrs</TextInfo>
+          </Info>
         </Content>
       </Item>
       <Item backgroundColor='hsl(264, 64%, 52%)'>
@@ -124,18 +103,12 @@ function Main() {
         <Content>
           <HeadContent>
             <ContentTitle>Social</ContentTitle>
-            <svg width='21' height='5' xmlns='http://www.w3.org/2000/svg'>
-              <path
-                d='M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z'
-                fill='#BBC0FF'
-                fillRule='evenodd'
-              />
-            </svg>
+            <ButtonOptions />
           </HeadContent>
-          <div className='info'>
-            <p>1hr</p>
-            <p>Previous - 3hrs</p>
-          </div>
+          <Info>
+            <TextInfo heading={true}>1hrs</TextInfo>
+            <TextInfo>Previous - 3hrs</TextInfo>
+          </Info>
         </Content>
       </Item>
       <Item backgroundColor='hsl(43, 84%, 65%)'>
@@ -143,18 +116,12 @@ function Main() {
         <Content>
           <HeadContent>
             <ContentTitle>Self Care</ContentTitle>
-            <svg width='21' height='5' xmlns='http://www.w3.org/2000/svg'>
-              <path
-                d='M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z'
-                fill='#BBC0FF'
-                fillRule='evenodd'
-              />
-            </svg>
+            <ButtonOptions />
           </HeadContent>
-          <div className='info'>
-            <p>0hrs</p>
-            <p>Previous - 1hr</p>
-          </div>
+          <Info>
+            <TextInfo heading={true}>0hrs</TextInfo>
+            <TextInfo>Previous - 1hrs</TextInfo>
+          </Info>
         </Content>
       </Item>
     </Box>
