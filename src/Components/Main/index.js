@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { useStaticQuery, graphql } from 'gatsby';
+
 import {
   Box,
   Content,
@@ -23,6 +25,36 @@ import ButtonOptions from '../ButtonOptions';
 import ProfilePhoto from '../ProfilePhoto';
 
 function Main() {
+  const staticQuery = useStaticQuery(graphql`
+    query TimeFrames {
+      allDataJson {
+        edges {
+          node {
+            color
+            icon
+            title
+            timeframes {
+              daily {
+                current
+                previous
+              }
+              monthly {
+                current
+                previous
+              }
+              weekly {
+                current
+                previous
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  console.log(staticQuery.allDataJson.edges);
+
   return (
     <Box>
       <ItemHead>

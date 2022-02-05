@@ -66,6 +66,7 @@ export const Cover = styled.div`
 
 export const TextCover = styled.p`
   margin-top: 2.6rem;
+  margin-bottom: 0.2rem;
   color: hsl(236, 100%, 87%);
   font-size: 0.8em;
 `;

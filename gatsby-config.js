@@ -24,5 +24,13 @@ module.exports = {
       },
       __key: 'images',
     },
+    'gatsby-transformer-json',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'data',
+        path: './src/data/',
+      },
+    },
   ],
 };

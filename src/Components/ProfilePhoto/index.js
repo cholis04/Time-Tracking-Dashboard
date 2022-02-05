@@ -18,9 +18,9 @@ const WrapImage = styled.div`
 function ProfilePhoto() {
   const staticQueryImageJeremy = useStaticQuery(graphql`
     query MyQuery {
-      file(name: { eq: "image-jeremy" }) {
+      file(sourceInstanceName: { eq: "images" }, name: { eq: "image-jeremy" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, width: 80)
+          gatsbyImageData
         }
       }
     }
