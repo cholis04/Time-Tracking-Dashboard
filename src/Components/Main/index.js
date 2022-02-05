@@ -2,15 +2,20 @@ import React from 'react';
 
 import { useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import {
+  Box,
+  Content,
+  ContentTitle,
+  HeadContent,
+  Item,
+  ItemHead,
+} from './styledMain';
+import Thumbnail from '../Thumbnail';
 
 function Main() {
   const staticQueryImageJeremy = useStaticQuery(graphql`
     query MyQuery {
-      file(
-        childrenImageSharp: {
-          elemMatch: { id: { eq: "874c6504-af24-5ca7-a5dd-cf3492f03336" } }
-        }
-      ) {
+      file(name: { eq: "image-jeremy" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
@@ -21,10 +26,14 @@ function Main() {
   const imageJeremy = getImage(staticQueryImageJeremy.file);
 
   return (
-    <div className='box'>
-      <div className='head-box'>
+    <Box>
+      <ItemHead>
         <div className='cover'>
-          <GatsbyImage image={imageJeremy} alt='Jeremy Robson Photo' />
+          <GatsbyImage
+            image={imageJeremy}
+            alt='Jeremy Robson Photo'
+            title='Jeremy Robson Photo'
+          />
           <p>Report for :</p>
           <h1>Jeremy Robson</h1>
         </div>
@@ -33,12 +42,12 @@ function Main() {
           <li>Weekly</li>
           <li>Monthly</li>
         </ul>
-      </div>
-      <div className='item-box'>
-        <img alt='' />
-        <div className='content'>
-          <div className='head-title'>
-            <h2>Work</h2>
+      </ItemHead>
+      <Item backgroundColor='hsl(15, 100%, 70%)'>
+        <Thumbnail src='icon-work' />
+        <Content>
+          <HeadContent>
+            <ContentTitle>Work</ContentTitle>
             <svg width='21' height='5' xmlns='http://www.w3.org/2000/svg'>
               <path
                 d='M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z'
@@ -46,18 +55,18 @@ function Main() {
                 fillRule='evenodd'
               />
             </svg>
-          </div>
+          </HeadContent>
           <div className='info'>
-            <h3>5hrs</h3>
+            <p>5hrs</p>
             <p>Previous - 7hrs</p>
           </div>
-        </div>
-      </div>
-      <div className='item-box'>
-        <img alt='' />
-        <div className='content'>
-          <div className='head-title'>
-            <h2>Play</h2>
+        </Content>
+      </Item>
+      <Item backgroundColor='hsl(195, 74%, 62%)'>
+        <Thumbnail src='icon-play' />
+        <Content>
+          <HeadContent>
+            <ContentTitle>Play</ContentTitle>
             <svg width='21' height='5' xmlns='http://www.w3.org/2000/svg'>
               <path
                 d='M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z'
@@ -65,18 +74,18 @@ function Main() {
                 fillRule='evenodd'
               />
             </svg>
-          </div>
+          </HeadContent>
           <div className='info'>
-            <h3>1hr</h3>
+            <p>1hr</p>
             <p>Previous - 2hrs</p>
           </div>
-        </div>
-      </div>
-      <div className='item-box'>
-        <img alt='' />
-        <div className='content'>
-          <div className='head-title'>
-            <h2>Study</h2>
+        </Content>
+      </Item>
+      <Item backgroundColor='hsl(348, 100%, 68%)'>
+        <Thumbnail src='icon-study' />
+        <Content>
+          <HeadContent>
+            <ContentTitle>Study</ContentTitle>
             <svg width='21' height='5' xmlns='http://www.w3.org/2000/svg'>
               <path
                 d='M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z'
@@ -84,18 +93,18 @@ function Main() {
                 fillRule='evenodd'
               />
             </svg>
-          </div>
+          </HeadContent>
           <div className='info'>
-            <h3>0hr</h3>
+            <p>0hr</p>
             <p>Previous - 1hrs</p>
           </div>
-        </div>
-      </div>
-      <div className='item-box'>
-        <img alt='' />
-        <div className='content'>
-          <div className='head-title'>
-            <h2>Exercise</h2>
+        </Content>
+      </Item>
+      <Item backgroundColor='hsl(145, 58%, 55%)'>
+        <Thumbnail src='icon-exercise' />
+        <Content>
+          <HeadContent>
+            <ContentTitle>Exercise</ContentTitle>
             <svg width='21' height='5' xmlns='http://www.w3.org/2000/svg'>
               <path
                 d='M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z'
@@ -103,18 +112,18 @@ function Main() {
                 fillRule='evenodd'
               />
             </svg>
-          </div>
+          </HeadContent>
           <div className='info'>
-            <h3>1hr</h3>
+            <p>1hr</p>
             <p>Previous - 1hrs</p>
           </div>
-        </div>
-      </div>
-      <div className='item-box'>
-        <img alt='' />
-        <div className='content'>
-          <div className='head-title'>
-            <h2>Social</h2>
+        </Content>
+      </Item>
+      <Item backgroundColor='hsl(264, 64%, 52%)'>
+        <Thumbnail src='icon-social' />
+        <Content>
+          <HeadContent>
+            <ContentTitle>Social</ContentTitle>
             <svg width='21' height='5' xmlns='http://www.w3.org/2000/svg'>
               <path
                 d='M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z'
@@ -122,18 +131,18 @@ function Main() {
                 fillRule='evenodd'
               />
             </svg>
-          </div>
+          </HeadContent>
           <div className='info'>
-            <h3>1hr</h3>
+            <p>1hr</p>
             <p>Previous - 3hrs</p>
           </div>
-        </div>
-      </div>
-      <div className='item-box'>
-        <img alt='' />
-        <div className='content'>
-          <div className='head-title'>
-            <h2>Self Care</h2>
+        </Content>
+      </Item>
+      <Item backgroundColor='hsl(43, 84%, 65%)'>
+        <Thumbnail src='icon-self-care' />
+        <Content>
+          <HeadContent>
+            <ContentTitle>Self Care</ContentTitle>
             <svg width='21' height='5' xmlns='http://www.w3.org/2000/svg'>
               <path
                 d='M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z'
@@ -141,14 +150,14 @@ function Main() {
                 fillRule='evenodd'
               />
             </svg>
-          </div>
+          </HeadContent>
           <div className='info'>
-            <h3>0hrs</h3>
+            <p>0hrs</p>
             <p>Previous - 1hr</p>
           </div>
-        </div>
-      </div>
-    </div>
+        </Content>
+      </Item>
+    </Box>
   );
 }
 

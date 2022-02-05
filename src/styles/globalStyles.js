@@ -12,7 +12,9 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Rubik', sans-serif;
         font-size: 18px;
         -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+        -moz-osx-font-smoothing: grayscale;    
+        background-color: hsl(226, 43%, 10%);
+        color:white;
     }
 
     img {
