@@ -12,7 +12,6 @@ const Main = styled.main`
   min-height: 100vh;
   display: grid;
   place-items: center;
-  border: 2px solid blue;
 `;
 
 export default function MainLayout({ children }) {

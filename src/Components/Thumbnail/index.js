@@ -18,26 +18,26 @@ function Thumbnail({ src }) {
     case 'icon-work':
       return (
         <ImageThumbnail>
-          <StaticImage width='70' src={`../../images/icon-work.svg`} alt='' />
+          <StaticImage width={70} src={`../../images/icon-work.svg`} alt='' />
         </ImageThumbnail>
       );
     case 'icon-play':
       return (
         <ImageThumbnail>
-          <StaticImage width='70' src={`../../images/icon-play.svg`} alt='' />
+          <StaticImage width={70} src={`../../images/icon-play.svg`} alt='' />
         </ImageThumbnail>
       );
     case 'icon-study':
       return (
         <ImageThumbnail>
-          <StaticImage width='70' src={`../../images/icon-study.svg`} alt='' />
+          <StaticImage width={70} src={`../../images/icon-study.svg`} alt='' />
         </ImageThumbnail>
       );
     case 'icon-exercise':
       return (
         <ImageThumbnail>
           <StaticImage
-            width='70'
+            width={70}
             src={`../../images/icon-exercise.svg`}
             alt=''
           />
@@ -46,14 +46,14 @@ function Thumbnail({ src }) {
     case 'icon-social':
       return (
         <ImageThumbnail>
-          <StaticImage width='70' src={`../../images/icon-social.svg`} alt='' />
+          <StaticImage width={70} src={`../../images/icon-social.svg`} alt='' />
         </ImageThumbnail>
       );
     case 'icon-self-care':
       return (
         <ImageThumbnail>
           <StaticImage
-            width='70'
+            width={70}
             src={`../../images/icon-self-care.svg`}
             alt=''
           />
@@ -62,7 +62,7 @@ function Thumbnail({ src }) {
     default:
       return (
         <ImageThumbnail>
-          <StaticImage width='70' src={`../../images/icon-work.svg`} alt='' />
+          <StaticImage width={70} src={`../../images/icon-work.svg`} alt='' />
         </ImageThumbnail>
       );
   }

@@ -1,50 +1,50 @@
 import React from 'react';
 
-import { useStaticQuery, graphql } from 'gatsby';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import {
   Box,
   Content,
   ContentTitle,
+  Cover,
   HeadContent,
   Info,
+  InputRadio,
   Item,
   ItemHead,
+  Label,
+  LabelText,
+  NameCover,
+  SelectForm,
+  TextCover,
   TextInfo,
 } from './styledMain';
+
 import Thumbnail from '../Thumbnail';
 import ButtonOptions from '../ButtonOptions';
+import ProfilePhoto from '../ProfilePhoto';
 
 function Main() {
-  const staticQueryImageJeremy = useStaticQuery(graphql`
-    query MyQuery {
-      file(name: { eq: "image-jeremy" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-    }
-  `);
-
-  const imageJeremy = getImage(staticQueryImageJeremy.file);
-
   return (
     <Box>
       <ItemHead>
-        <div className='cover'>
-          <GatsbyImage
-            image={imageJeremy}
-            alt='Jeremy Robson Photo'
-            title='Jeremy Robson Photo'
-          />
-          <p>Report for :</p>
-          <h1>Jeremy Robson</h1>
-        </div>
-        <ul className='action'>
-          <li>Daily</li>
-          <li>Weekly</li>
-          <li>Monthly</li>
-        </ul>
+        <Cover>
+          <ProfilePhoto />
+          <TextCover>Report for :</TextCover>
+          <NameCover>Jeremy Robson</NameCover>
+        </Cover>
+        <SelectForm name='select-time'>
+          <Label htmlFor='daily'>
+            <InputRadio name='time' id='daily' />
+            <LabelText>Daily</LabelText>
+          </Label>
+          <Label htmlFor='weekly'>
+            <InputRadio name='time' id='weekly' defaultChecked />
+            <LabelText>Weekly</LabelText>
+          </Label>
+          <Label htmlFor='monthly'>
+            <InputRadio name='time' id='monthly' />
+            <LabelText>Monthly</LabelText>
+          </Label>
+        </SelectForm>
       </ItemHead>
       <Item backgroundColor='hsl(15, 100%, 70%)'>
         <Thumbnail src='icon-work' />
@@ -55,7 +55,7 @@ function Main() {
           </HeadContent>
           <Info>
             <TextInfo heading={true}>5hrs</TextInfo>
-            <TextInfo>Previous - 7hrs</TextInfo>
+            <TextInfo>Last Day - 7hrs</TextInfo>
           </Info>
         </Content>
       </Item>
@@ -68,7 +68,7 @@ function Main() {
           </HeadContent>
           <Info>
             <TextInfo heading={true}>1hrs</TextInfo>
-            <TextInfo>Previous - 2hrs</TextInfo>
+            <TextInfo>Last Day - 2hrs</TextInfo>
           </Info>
         </Content>
       </Item>
@@ -81,7 +81,7 @@ function Main() {
           </HeadContent>
           <Info>
             <TextInfo heading={true}>0hrs</TextInfo>
-            <TextInfo>Previous - 1hrs</TextInfo>
+            <TextInfo>Last Day - 1hrs</TextInfo>
           </Info>
         </Content>
       </Item>
@@ -94,7 +94,7 @@ function Main() {
           </HeadContent>
           <Info>
             <TextInfo heading={true}>1hrs</TextInfo>
-            <TextInfo>Previous - 1hrs</TextInfo>
+            <TextInfo>Last Day - 1hrs</TextInfo>
           </Info>
         </Content>
       </Item>
@@ -107,7 +107,7 @@ function Main() {
           </HeadContent>
           <Info>
             <TextInfo heading={true}>1hrs</TextInfo>
-            <TextInfo>Previous - 3hrs</TextInfo>
+            <TextInfo>Last Day - 3hrs</TextInfo>
           </Info>
         </Content>
       </Item>
@@ -120,7 +120,7 @@ function Main() {
           </HeadContent>
           <Info>
             <TextInfo heading={true}>0hrs</TextInfo>
-            <TextInfo>Previous - 1hrs</TextInfo>
+            <TextInfo>Last Day - 1hrs</TextInfo>
           </Info>
         </Content>
       </Item>
