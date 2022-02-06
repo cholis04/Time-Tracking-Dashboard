@@ -1,7 +1,8 @@
 import * as React from 'react';
-import Main from '../components/Main';
 
 import MainLayout from '../layouts/MainLayout';
+
+import Main from '../components/Main';
 
 // markup
 const IndexPage = () => {

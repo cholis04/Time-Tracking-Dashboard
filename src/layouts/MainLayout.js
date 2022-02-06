@@ -1,9 +1,9 @@
 import React from 'react';
-
 import { Helmet } from 'react-helmet';
+import styled from 'styled-components';
 import GlobalStyle from '../styles/globalStyles';
 
-import styled from 'styled-components';
+import Footer from '../components/Footer';
 
 const Main = styled.main`
   margin: 0 auto;
@@ -22,6 +22,7 @@ export default function MainLayout({ children }) {
       </Helmet>
       <GlobalStyle />
       <Main>{children}</Main>
+      <Footer />
     </>
   );
 }
