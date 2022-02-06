@@ -57,24 +57,6 @@ export const TextInfo = styled.p`
   color: ${(props) => (props.heading ? 'white' : 'hsl(236, 100%, 87%)')};
 `;
 
-export const Cover = styled.div`
-  width: 100%;
-  padding: 1.6em;
-  border-radius: 15px;
-  background-color: hsl(246, 80%, 60%);
-`;
-
-export const TextCover = styled.p`
-  margin-top: 2.6rem;
-  margin-bottom: 0.2rem;
-  color: hsl(236, 100%, 87%);
-  font-size: 0.8em;
-`;
-
-export const NameCover = styled.h1`
-  font-weight: 300;
-`;
-
 export const SelectForm = styled.form`
   padding: 1.6em;
   display: flex;
@@ -100,5 +82,9 @@ export const InputRadio = styled.input.attrs({ type: 'radio' })`
   display: none;
   &:checked + ${LabelText} {
     color: white;
+  }
+
+  &:disabled + ${LabelText} {
+    cursor: wait;
   }
 `;

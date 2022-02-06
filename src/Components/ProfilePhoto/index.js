@@ -6,13 +6,13 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 
 const WrapImage = styled.div`
-  width: 86px;
-  height: 86px;
-  background: white;
+  width: 80px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 100%;
+  border: 3px solid white;
 `;
 
 function ProfilePhoto() {
