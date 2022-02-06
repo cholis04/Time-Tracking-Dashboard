@@ -10,9 +10,8 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -30,7 +29,6 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
 - Live Site URL: [https://time-tracking-dashboard-fem.web.app/](https://time-tracking-dashboard-fem.web.app/)
 - Repository URL: [https://github.com/cholis04/Time-Tracking-Dashboard](https://github.com/cholis04/Time-Tracking-Dashboard)
 
@@ -44,14 +42,8 @@ Users should be able to:
 - Desktop-first workflow
 - Flexbox
 - CSS Grid
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [React CountUp](https://www.npmjs.com/package/react-countup/) - Create animations that display numerical data
+- GraphQL
 
 ## Author
 
@@ -60,3 +52,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 - Dribbble - [cholis04](https://dribbble.com/cholis04)
 - Instagram - [@cholis04](https://instagram.com/cholis04)
 - Codepen - [cholis04](https://codepen.io/cholis04)
+
+## Acknowledgments
+
+Thanks to anyone who provided feedback.
