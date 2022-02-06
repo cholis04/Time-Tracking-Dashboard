@@ -37,7 +37,6 @@ function ItemList({ activity, time }) {
     end: timeframes[time].current,
     suffix: 'hrs',
     duration: 1.5,
-    useEasing: true,
   });
 
   useEffect(() => {

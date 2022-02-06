@@ -3,10 +3,19 @@ import styled from 'styled-components';
 export const Box = styled.div`
   margin: 0 auto;
   width: 100%;
+  min-width: 375px;
   max-width: 1110px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  gap: 1.6em;
+
+  @media only screen and (max-width: 980px) {
+    padding: 1.6em;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media only screen and (max-width: 680px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const Item = styled.div`
@@ -19,6 +28,9 @@ export const ItemHead = styled(Item)`
   grid-row: span 2;
   display: grid;
   grid-template-rows: 1fr 160px;
+  @media only screen and (max-width: 680px) {
+    grid-template-rows: 1fr auto;
+  }
 `;
 
 export const Content = styled.div`
@@ -48,6 +60,12 @@ export const Info = styled.div`
   margin-top: 1.4rem;
   display: flex;
   flex-direction: column;
+
+  @media only screen and (max-width: 680px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+  }
 `;
 
 export const TextInfo = styled.p`
@@ -55,6 +73,11 @@ export const TextInfo = styled.p`
   font-size: ${(props) => (props.heading ? '3em' : '0.8em')};
   font-weight: ${(props) => (props.heading ? '300' : '500')};
   color: ${(props) => (props.heading ? 'white' : 'hsl(236, 100%, 87%)')};
+
+  @media only screen and (max-width: 680px) {
+    font-size: ${(props) => (props.heading ? '1.8em' : '0.7em')};
+    margin-bottom: 0;
+  }
 `;
 
 export const SelectForm = styled.form`
@@ -62,6 +85,10 @@ export const SelectForm = styled.form`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+
+  @media only screen and (max-width: 680px) {
+    flex-direction: row;
+  }
 `;
 
 export const Label = styled.label`
@@ -86,5 +113,9 @@ export const InputRadio = styled.input.attrs({ type: 'radio' })`
 
   &:disabled + ${LabelText} {
     cursor: wait;
+  }
+  &[disabled]:not(:checked) + ${LabelText} {
+    color: rgba(255, 255, 255, 0.2);
+    text-decoration: line-through;
   }
 `;
