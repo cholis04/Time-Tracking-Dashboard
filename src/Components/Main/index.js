@@ -51,7 +51,7 @@ function Main() {
   useEffect(() => {
     const loading = setTimeout(() => {
       setDisabled(false);
-    }, 1000);
+    }, 1500);
     return () => clearTimeout(loading);
   }, [time]);
 
